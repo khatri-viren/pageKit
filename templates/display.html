@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Data</title>
+</head>
+<body>
+    <h1>Display Data</h1>
+    
+    {% if data %}
+    <table>
+        <thead>
+            <tr>
+                <th>Field 1</th>
+                <th>Field 2</th>
+                <th>Field 3</th>
+                <th>Field 4</th>
+                <th>Field 5</th>
+                <th>Field 6</th>
+                <th>Field 7</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <td>{{ row[6] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No data found in the Excel file.</p>
+    {% endif %}
+</body>
+</html>
